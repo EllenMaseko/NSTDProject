@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Quality Prediction</title>
+    <link rel="stylesheet" href="{% static 'front_end.css' %}">
+</head>
+<body>
+    <div class="main-content">
+
+        <header>
+            <h1>Sneaker Quality Prediction</h1>
+            <p>Welcome to our Sneaker Quality Prediction Tool.</p>
+        </header>
+        <div class="features">
+            <form action="{% url 'api_endpoint' %}" method="post">
+                <p>
+                <!-- product_id -->
+                <label for="product_id">product_id:</label>
+                <input type="number" id="product" name="product" step="0.1" min="1" max="1000"> </p>
+
+                <p>
+                <!-- review_text -->
+                <label for="review_text">review_text:</label>
+                <input type="number" id="text" name="text" step="0.1" min="1" max="14"> </p>
+
+                <input type="submit" value="Predict Quality">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
